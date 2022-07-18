@@ -1,96 +1,117 @@
+const rockBtn = document.querySelector("#rockBtn"); 
+const paperBtn = document.querySelector("#paperBtn"); 
+const scissorsBtn = document.querySelector("#scissorsBtn");   
+
+
+//variables for the selection
+let rockSelect = "rock"; 
+let paperSelect = "paper"; 
+let scissorSelect = "scissors"; 
+
+//div for the winner result and scores
+const result= document.querySelector("#announce");
+const compScoreHolder = document.querySelector("#compScoreHolder");
+const playerScoreHolder = document.querySelector("#playerScoreHolder"); 
+const winHolder = document.querySelector("#winHolder");
+//scores
+
+let compScore = 0; 
+let playerSCore = 0; 
+
+
+
 function computerPlay(){
     let computerSelection=""; 
     const choice =  Math.floor(Math.random()*3); 
 
     if(choice == 0){
-        computerSelection = "Rock"; 
+        computerSelection = "rock"; 
     }
     else if(choice == 1){
-        computerSelection = "Paper"; 
+        computerSelection = "paper"; 
     }
     else{
-        computerSelection = "Scissors"; 
+        computerSelection = "scissors"; 
     }
 
     return computerSelection; 
-
 }
-
-var compscore =0; 
-var playerscore=0; 
 
 
 function playRound(playerSelection, computerSelection) {
-
+    winHolder.textContent="";
+    
     if (playerSelection === computerSelection ){ 
-        alert(" Draw!") ; 
+        result.textContent = "Draw!"; 
     }
     else if (playerSelection === "paper" && computerSelection === "rock"){
-        playerscore++; 
-        alert(" Player win: Paper beats Rock!"); 
+        result.textContent = "Player win: Paper beats Rock!"; 
+        playerSCore++; 
+        playerScoreHolder.textContent=playerSCore; 
     }
     else if (playerSelection === "rock" && computerSelection === "paper"){
-        compscore++; 
-        alert( "Computer win: Paper beats Rock!"); 
+        result.textContent = "Computer win: Paper beats Rock!"; 
+        compScore++; 
+        compScoreHolder.textContent=compScore; 
     }
     else if (playerSelection === "paper" && computerSelection === "scissors"){
-        compscore++; 
-        alert( " Computer win: Scissors beats Paper!"); 
+        result.textContent = "Computer win: Scissors beats Paper!"; 
+        compScore++;
+        compScoreHolder.textContent = compScore; 
     }
     else if (playerSelection === "scissors" && computerSelection === "paper"){
-        playerscore++; 
-        alert(  " Player win: Scissors beats Paper!"); 
+        result.textContent = "Player win: Scissors beats Paper!"; 
+        playerSCore++; 
+        playerScoreHolder.textContent = playerSCore; 
     }
     else if (playerSelection === "rock" && computerSelection === "scissors"){
-        playerscore++; 
-        alert( " Player win: Rock beats Scissors!"); 
+        result.textContent = "Player win: Rock beats Scissors!"; 
+        playerSCore++; 
+        playerScoreHolder.textContent = playerSCore; 
     }
     else if (playerSelection === "scissors" && computerSelection === "rock"){
-        compscore++; 
-        alert( " Computer win: Rock beats Scissors!"); 
+        result.textContent = "Computer win: Rock beats Scissors!"; 
+        compScore++;
+        compScoreHolder.textContent = compScore; 
     }
 
-  
+    if (playerSCore == 5){
+        
+        compScoreHolder.textContent="0"; 
+        compScore = 0; 
+        playerScoreHolder.textContent="0"; 
+        playerSCore = 0; 
+        winHolder.textContent="Player Wins";
+        
+    }
+    else if (compScore == 5){
+        compScoreHolder.textContent="0"; 
+        compScore = 0; 
+        playerScoreHolder.textContent="0"; 
+        playerSCore = 0; 
+        winHolder.textContent="Computer Wins";
+        
+    }
+
+}
+
+//even listeners for the playRound function - with param(selection,computerPlay())
+
+rockBtn.addEventListener('click', () => {
+    playRound(rockSelect,computerPlay()); 
+}); 
+paperBtn.addEventListener('click', () => {
+    playRound(paperSelect,computerPlay()); 
     
-}
-
-function reset(){
-     compscore =0; 
-     playerscore=0; 
-}
-
-function game(){
+}); 
+scissorsBtn.addEventListener('click', () => {
+    playRound(scissorSelect,computerPlay()); 
     
-    let i = 0; 
-    do{
-        let computerSelection = computerPlay().toLowerCase(); 
-        let playerSelection = prompt("Round "+(i+1)+"\nComputer : "+compscore+" | Player: "+playerscore+"\nRock, Paper, or Scissors?").toLowerCase(); 
-       
-        i++
-        playRound(playerSelection, computerSelection);
-        console.log(compscore); 
-        console.log(playerscore); 
-    }
-    while (i<5){
-    }
-
-    if(compscore > playerscore){
-        alert ("computer wins!");
-    }
-    else if (playerscore > compscore)
-    {
-        alert ("you win!");
-    }
-    else{
-        alert ("draw!"); 
-    }
-
-    reset(); 
-
-}
+}); 
 
 
-game(); 
+
+
 
 
 
