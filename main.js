@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection === "rock" && computerSelection === "paper"){
         compscore++; 
-        alert( " Computer win: Paper beats Rock!"); 
+        alert( "Computer win: Paper beats Rock!"); 
     }
     else if (playerSelection === "paper" && computerSelection === "scissors"){
         compscore++; 
@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection === "scissors" && computerSelection === "rock"){
         compscore++; 
-        alert( " Computer: Rock beats Scissors!"); 
+        alert( " Computer win: Rock beats Scissors!"); 
     }
 
   
