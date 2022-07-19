@@ -95,9 +95,7 @@ button{
     cursor: pointer;
     font-size: 50px;
 }
-#scissorsBtn{
-    font-size: 80px;
-}
+
 button:hover{
     border: 2px solid black;
 }
