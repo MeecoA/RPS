@@ -111,7 +111,7 @@ scissorsBtn.addEventListener('click', () => {
 }); 
 resetBtn.addEventListener('click', () => {
     location.reload();
-    result.textContent="Start"
+    
     
 }); 
 
