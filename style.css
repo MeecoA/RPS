@@ -109,6 +109,17 @@ button:active{
     padding-top: 20px;
     justify-content: center;
 }
+
+#rockBtn{
+    background-color: red;
+}
+#paperBtn{
+    background-color: blue;
+}
+#scissorsBtn{
+    background-color: yellow;
+}
+
 #resetBtn{
     border-radius: 10px;
     width: 100px;
