@@ -6,19 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="rockBtn">Rock</button>
-    <button id="paperBtn">Paper</button>
-    <button id="scissorsBtn">Scissors</button>
+    <div id="mainContainer">
+        <div id="container">
+            <div id="screenBezel">
 
-    <div id="announce">
+                <div id="screen">
+                    <div id="screenContainer">
+                        <div id="resultWin">
+                            <div id="announce">Rock, Paper, Scissors</div>
+                            <div id="winHolder">Choose your Weapon!</div>
+                        </div>
+                        <div id="scoresHolder">
+                            <div id="scoreContainer">
+                            Player: 
+                            <div id="playerScoreHolder">0</div>
+                            Computer: 
+                            <div id="compScoreHolder">0</div>
+                            </div>
+                       </div>  
+                    </div>
+                </div>
+            </div>
+            <div id="buttonsWrapper">
+                <div id="buttonsContainer">
+                    <button id="rockBtn">&#9994</button>
+                    <button id="paperBtn">&#9995</button>
+                    <button id="scissorsBtn">&#9996</button>
+                </div>   
+            </div>
+            <div id="resetContainer">
+                    <button id="resetBtn">Reset</button>
+            </div>  
+            <div id="credits">
+                <div>R.P.S</div>
+                <div class="cred">&#169;2022 By MeecoA</div>
+                <div class="cred">|The Odin Project</div>
+                </div>
+               
+               
+                
+            </div>
+            
+        </div>     
     </div>
-    Player: 
-    <div id="playerScoreHolder">0</div>
-    Computer: 
-    <div id="compScoreHolder">0</div>
-    <div id="winHolder"></div>
+  
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 const rockBtn = document.querySelector("#rockBtn"); 
 const paperBtn = document.querySelector("#paperBtn"); 
 const scissorsBtn = document.querySelector("#scissorsBtn");   
+const resetBtn = document.querySelector("#resetBtn");
 
 
 //variables for the selection
@@ -81,7 +82,7 @@ function playRound(playerSelection, computerSelection) {
         compScore = 0; 
         playerScoreHolder.textContent="0"; 
         playerSCore = 0; 
-        winHolder.textContent="Player Wins";
+        winHolder.textContent="You win!";
         
     }
     else if (compScore == 5){
@@ -89,7 +90,7 @@ function playRound(playerSelection, computerSelection) {
         compScore = 0; 
         playerScoreHolder.textContent="0"; 
         playerSCore = 0; 
-        winHolder.textContent="Computer Wins";
+        winHolder.textContent="Computer Won";
         
     }
 
@@ -108,8 +109,11 @@ scissorsBtn.addEventListener('click', () => {
     playRound(scissorSelect,computerPlay()); 
     
 }); 
-
-
+resetBtn.addEventListener('click', () => {
+    location.reload();
+    result.textContent="Start"
+    
+}); 
 
 
 

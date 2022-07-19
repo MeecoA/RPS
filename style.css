@@ -1,0 +1,127 @@
+*{
+    font-family: monospace;
+}
+body{
+    background-color: skyblue;
+ 
+}
+#mainContainer{
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    height: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 100px;
+    background-color: lightgray;
+    box-shadow: 5px 10px #888888;
+}
+#container{
+    padding-top: 20px;
+    height: 500px;
+    
+}
+#screenBezel{
+    width: 450px;
+    margin: auto;
+    border-radius: 10px;
+    height: 200px;
+    background-color: #888888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#screen{
+    width: 380px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+#screenContainer{
+
+    width: 380px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#resultWin{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 50px;
+    justify-content: space-between;
+}
+#announce{
+    font-size: 14px;
+}
+#winHolder{
+    font-size: 20px;
+}
+#scoresHolder{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+#scoreContainer{
+    display: flex;
+    justify-content: space-around;
+}
+#buttonsWrapper{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#buttonsContainer{
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 2px 5px #888888;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+}
+#scissorsBtn{
+    font-size: 80px;
+}
+button:hover{
+    border: 2px solid black;
+}
+button:active{
+    background-color: lightgray;
+}
+
+#resetContainer{
+
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+#resetBtn{
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+#credits{
+
+    font-size: 20px;
+    padding: 1em;
+}
+.cred{
+    font-size: 10px;
+}
